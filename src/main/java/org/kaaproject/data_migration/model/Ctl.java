@@ -2,8 +2,8 @@ package org.kaaproject.data_migration.model;
 
 
 public class Ctl {
-    public final Long id;
-    public final CtlMetaInfo metaInfo;
+    private final Long id;
+    private final CtlMetaInfo metaInfo;
 
     public Ctl(Long id, CtlMetaInfo metaInfo) {
         this.id = id;
@@ -25,5 +25,13 @@ public class Ctl {
     @Override
     public int hashCode() {
         return metaInfo.hashCode();
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public CtlMetaInfo getMetaInfo() {
+        return metaInfo;
     }
 }

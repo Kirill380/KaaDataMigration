@@ -3,9 +3,9 @@ package org.kaaproject.data_migration.model;
 
 public class CtlMetaInfo {
 
-    public final String fqn;
-    public final Long appId;
-    public final Long tenatnId;
+    private final String fqn;
+    private final Long appId;
+    private final Long tenatnId;
 
     public CtlMetaInfo(String fqn, Long appId, Long tenatnId) {
         this.fqn = fqn;
@@ -28,5 +28,17 @@ public class CtlMetaInfo {
     @Override
     public int hashCode() {
         return fqn != null ? fqn.hashCode() : 0;
+    }
+
+    public Long getAppId() {
+        return appId;
+    }
+
+    public Long getTenatnId() {
+        return tenatnId;
+    }
+
+    public String getFqn() {
+        return fqn;
     }
 }

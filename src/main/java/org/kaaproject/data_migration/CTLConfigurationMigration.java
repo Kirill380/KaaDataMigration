@@ -73,8 +73,8 @@ public class CTLConfigurationMigration {
                             schema.getDescription(),
                             schema.getName(),
                             schema.getVersion(),
-                            ctl.metaInfo.appId,
-                            ctl.id
+                            ctl.getMetaInfo().getAppId(),
+                            ctl.getId()
                     });
                 }
             }

@@ -1,23 +1,24 @@
 package org.kaaproject.data_migration;
 
 
-import com.redkite.gen.model.tables.pojos.Configuration;
-import com.redkite.gen.model.tables.records.ConfigurationRecord;
+
 import org.codehaus.jackson.JsonNode;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.node.ObjectNode;
 import org.jooq.DSLContext;
 import org.jooq.SQLDialect;
 import org.jooq.impl.DSL;
+import org.kaaproject.data_migration.model.gen.tables.pojos.Configuration;
+import org.kaaproject.data_migration.model.gen.tables.records.ConfigurationRecord;
+import org.kaaproject.data_migration.utils.DataSources;
 
 import java.util.Base64;
 import java.util.List;
 
-import static com.redkite.gen.model.Tables.CONFIGURATION;
+import static org.kaaproject.data_migration.model.gen.Tables.CONFIGURATION;
 
-/**
- * Created by user482400 on 03.08.16.
- */
+
+
 public final class ConfigurationUpgrade {
     private static final String UUID_FIELD = "__uuid";
     private static final String UUID_VALUE = "org.kaaproject.configuration.uuidT";

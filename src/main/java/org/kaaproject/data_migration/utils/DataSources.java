@@ -1,4 +1,4 @@
-package org.kaaproject.data_migration;
+package org.kaaproject.data_migration.utils;
 
 
 import org.apache.commons.dbcp.BasicDataSource;
@@ -11,7 +11,7 @@ public enum DataSources {
 
     private final DataSource ds;
     private static final String USER_NAME = "root";
-    private static final String PASSWORD = "root";
+    private static final String PASSWORD = "kaa";
     private static final String DB_NAME = "kaa";
 
      DataSources(DataSource ds) {
@@ -38,6 +38,7 @@ public enum DataSources {
         bds.setUrl("jdbc:mysql://localhost:3306/" + DB_NAME);
         bds.setUsername(USER_NAME);
         bds.setPassword(PASSWORD);
+//        bds.setDefaultAutoCommit(false);
         return bds;
     }
 }
